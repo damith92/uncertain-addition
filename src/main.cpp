@@ -84,13 +84,3 @@ int main(int argc, char *  argv[]) {
 	return 0;
 }
 
-	
-	
-	
-	
-	free(samplesA);
-	
-	free(samplesB);
-
-	return 0;
-}
