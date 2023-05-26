@@ -23,13 +23,12 @@ int main(int argc, char *  argv[]) {
 	iss.str(line) ;
 	iss >> numSampA;
 
-	std::cout << std::to_string(numSampA) << std::endl ;
+	std::cout << "No of \"A\" samples = " << std::to_string(numSampA) << std::endl ;
 	
 	samplesA = (double *) calloc(numSampA, sizeof(double));
 	
 	for (int i = 0 ; i < numSampA; i++) {
 		
-		//std::getline(aFile, &samplesA[i]);
 		std::getline(aFile, line);
 		iss.clear();
 		iss.str(line) ;
@@ -39,14 +38,14 @@ int main(int argc, char *  argv[]) {
 	
 	aFile.close();
 	
-	
 	bFile.open("input-B.txt");
 	
-	//std::getline(bFile, numSampB);
 	std::getline(bFile, line);
 	iss.clear();
 	iss.str(line) ;
 	iss >> numSampB ;
+
+	std::cout << "No of \"B\" samples = " << std::to_string(numSampB) << std::endl ;
 	
 	samplesB = (double *) calloc(numSampB, sizeof(double));
 	
@@ -74,8 +73,6 @@ int main(int argc, char *  argv[]) {
 	std::cout << "B = " << B << std::endl ;
 	
 	std::cout << "C = A + B = " << C << std::endl ;
-	
-	
 	
 	free(samplesA);
 	
