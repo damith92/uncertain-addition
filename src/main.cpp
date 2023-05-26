@@ -19,6 +19,12 @@ int main(int argc, char *  argv[]) {
 	std::string line ;
 	
 	aFile.open("input-A.txt");
+
+	if (aFile == NULL)
+			{
+				std::cout << "No file read" <<std::endl;
+				exit(EXIT_FAILURE);
+			}
 	
 	std::getline(aFile, line);
 	
