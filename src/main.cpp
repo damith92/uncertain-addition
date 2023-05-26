@@ -13,16 +13,24 @@ int main(int argc, char *  argv[]) {
 	int            numSampA, numSampB;
 	double         A, B, C;
 
+	std::string line;
+	std::istringstream iss;
+
 	
 	aFile.open ("file.txt");
 	
-	std::getline(aFile, numSampA);
+	std::getline(aFile, line);
+	iss(line) ;
+	iss >> numSampA ;
 	
 	samplesA = calloc(numSampA, sizeof(double));
 	
 	for (int i = 0 ; i < numSampA; i++) {
 		
-		std::getline(aFile, &samplesA[i]);
+		//std::getline(aFile, &samplesA[i]);
+		std::getline(aFile, line);
+		iss(line) ;
+		iss >> &samplesA[i];
 		
 	}
 	
@@ -31,13 +39,19 @@ int main(int argc, char *  argv[]) {
 	
 	bFile.open ("file.txt");
 	
-	std::getline(aFile, numSampB);
+	//std::getline(bFile, numSampB);
+	std::getline(bFile, line);
+	iss(line) ;
+	iss >> numSampB ;
 	
 	samplesB = calloc(numSampB, sizeof(double));
 	
 	for (int i = 0 ; i < numSampB; i++) {
 		
-		std::getline(aFile, &samplesB[i]);
+		//std::getline(bFile, &samplesB[i]);
+		std::getline(bFile, line);
+		iss(line) ;
+		iss >> &samplesB[i];
 		
 	}
 	
