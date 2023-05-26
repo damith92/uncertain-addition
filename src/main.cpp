@@ -30,10 +30,10 @@ int main(int argc, char *  argv[]) {
 		
 		//std::getline(aFile, &samplesA[i]);
 		std::getline(aFile, line);
-		//iss.clear();
-		//iss.str(line) ;
-		//iss >> &samplesA[i];
-		&samplesA[i] = std::stod(std::to_string(line));
+		iss.clear();
+		iss.str(line) ;
+		iss >> samplesA[i];
+		//&samplesA[i] = std::stod(std::to_string(line));
 		
 	}
 	
@@ -56,7 +56,7 @@ int main(int argc, char *  argv[]) {
 		std::getline(bFile, line);
 		iss.str(line) ;
 		iss.clear();
-		iss >> &samplesB[i];
+		iss >> samplesB[i];
 		
 	}
 	
