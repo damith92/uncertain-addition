@@ -16,13 +16,13 @@ int main(int argc, char *  argv[]) {
 	
 	aFile.open ("file.txt");
 	
-	getline(aFile, numSampA);
+	std::getline(aFile, numSampA);
 	
 	samplesA = calloc(numSampA, sizeof(double));
 	
 	for (int i = 0 ; i < numSampA; i++) {
 		
-		getline(aFile, &samplesA[i]);
+		std::getline(aFile, &samplesA[i]);
 		
 	}
 	
@@ -31,13 +31,13 @@ int main(int argc, char *  argv[]) {
 	
 	bFile.open ("file.txt");
 	
-	getline(aFile, numSampB);
+	std::getline(aFile, numSampB);
 	
 	samplesB = calloc(numSampB, sizeof(double));
 	
 	for (int i = 0 ; i < numSampB; i++) {
 		
-		getline(aFile, &samplesB[i]);
+		std::getline(aFile, &samplesB[i]);
 		
 	}
 	
