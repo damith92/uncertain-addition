@@ -23,7 +23,7 @@ int main(int argc, char *  argv[]) {
 	std::getline(aFile, line);
 	std::cout << line << std::endl ;
 	//iss.str(line) ;
-	numSampA = std::stoi(iss);
+	numSampA = std::stoi(line);
 	
 	samplesA = (double *) calloc(numSampA, sizeof(double));
 	
