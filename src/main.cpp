@@ -14,7 +14,7 @@ int main(int argc, char *  argv[]) {
 	int            numSampA, numSampB;
 	double         A, B, C;
 
-	//std::istringstream iss;
+	std::istringstream iss;
 
 	std::string line ;
 	
