@@ -19,6 +19,7 @@ int main(int argc, char *  argv[]) {
 	std::string line ;
 	
 	aFile.open("input-A.txt");
+	std::getline(aFile, line);
 	iss.str(line) ;
 	iss >> numSampA;
 
@@ -33,7 +34,6 @@ int main(int argc, char *  argv[]) {
 		iss.clear();
 		iss.str(line) ;
 		iss >> samplesA[i];
-		//&samplesA[i] = std::stod(std::to_string(line));
 		
 	}
 	
@@ -44,8 +44,8 @@ int main(int argc, char *  argv[]) {
 	
 	//std::getline(bFile, numSampB);
 	std::getline(bFile, line);
-	iss.str(line) ;
 	iss.clear();
+	iss.str(line) ;
 	iss >> numSampB ;
 	
 	samplesB = (double *) calloc(numSampB, sizeof(double));
