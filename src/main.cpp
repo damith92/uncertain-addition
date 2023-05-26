@@ -26,7 +26,7 @@ int main(int argc, char *  argv[]) {
 	iss.str(line) ;
 	iss >> numSampA;
 
-	std::cout << std::string(numSampA) << std::endl ;
+	std::cout << std::to_string(numSampA) << std::endl ;
 	
 	
 	
