@@ -20,10 +20,10 @@ int main(int argc, char *  argv[]) {
 	
 	aFile.open("input-A.txt");
 
-	if (aFile == NULL)
+	if (aFile)
 			{
-				std::cout << "No file read" <<std::endl;
-				exit(EXIT_FAILURE);
+				std::cout << "file exists" <<std::endl;
+				
 			}
 	
 	std::getline(aFile, line);
