@@ -2,7 +2,7 @@
 #include <fstream>
 #include <uncertain.h>
 #include <string.h>
-//#include <sstream>
+#include <sstream>
 
 int main(int argc, char *  argv[]) {
 	
@@ -21,8 +21,8 @@ int main(int argc, char *  argv[]) {
 	aFile.open("file.txt");
 	
 	std::getline(aFile, line);
-	//iss.str(line) ;
-	numSampA = std::stoi(std::string(line));
+	iss.str(line) ;
+	numSampA = std::stoi(iss);
 	
 	samplesA = (double *) calloc(numSampA, sizeof(double));
 	
