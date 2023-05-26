@@ -31,7 +31,7 @@ int main(int argc, char *  argv[]) {
 		//std::getline(aFile, &samplesA[i]);
 		std::getline(aFile, line);
 		iss.str(line) ;
-		iss >> &samplesA[i];
+		iss >> samplesA[i];
 		
 	}
 	
@@ -52,7 +52,7 @@ int main(int argc, char *  argv[]) {
 		//std::getline(bFile, &samplesB[i]);
 		std::getline(bFile, line);
 		iss.str(line) ;
-		iss >> &samplesB[i];
+		iss >> samplesB[i];
 		
 	}
 	
