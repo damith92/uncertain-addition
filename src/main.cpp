@@ -5,7 +5,7 @@
 
 int main(int argc, char *  argv[]) {
 	
-	ifstream aFile, bFile;
+	std::ifstream aFile, bFile;
 	
 	double * samplesA;
 	double * samplesB;
@@ -49,12 +49,12 @@ int main(int argc, char *  argv[]) {
 	
 	C = A + B ;
 	
-	cout << "Implicit calculation :" << endl ;
+	std::cout << "Implicit calculation :" << std::endl ;
 	
-	cout << "A = " << A << endl ;
-	cout << "B = " << B << endl ;
+	std::cout << "A = " << A << std::endl ;
+	std::cout << "B = " << B << std::endl ;
 	
-	cout << "C = A + B = " << C < endl ;
+	std::cout << "C = A + B = " << C < std::endl ;
 	
 	
 	free(samplesA);
