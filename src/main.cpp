@@ -2,6 +2,7 @@
 #include <fstream>
 #include <uncertain.h>
 #include <string.h>
+#include <sstream>
 
 int main(int argc, char *  argv[]) {
 	
@@ -68,7 +69,7 @@ int main(int argc, char *  argv[]) {
 	std::cout << "A = " << A << std::endl ;
 	std::cout << "B = " << B << std::endl ;
 	
-	std::cout << "C = A + B = " << C < std::endl ;
+	std::cout << "C = A + B = " << C << std::endl ;
 	
 	
 	free(samplesA);
