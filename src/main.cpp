@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <uncertain>
+#include <uncertain.h>
 #include <string>
 #include <sstream>
 
