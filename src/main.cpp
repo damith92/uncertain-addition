@@ -22,7 +22,7 @@ int main(int argc, char *  argv[]) {
 	std::istringstream iss(line) ;
 	iss >> numSampA ;
 	
-	samplesA = calloc(numSampA, sizeof(double));
+	samplesA = (double *) calloc(numSampA, sizeof(double));
 	
 	for (int i = 0 ; i < numSampA; i++) {
 		
@@ -43,7 +43,7 @@ int main(int argc, char *  argv[]) {
 	std::istringstream iss(line) ;
 	iss >> numSampB ;
 	
-	samplesB = calloc(numSampB, sizeof(double));
+	samplesB = (double *) calloc(numSampB, sizeof(double));
 	
 	for (int i = 0 ; i < numSampB; i++) {
 		
