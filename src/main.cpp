@@ -21,7 +21,7 @@ int main(int argc, char *  argv[]) {
 	aFile.open("input-A.txt");
 	
 	std::getline(aFile, line);
-	std::cout << line << std::endl ;
+	std::cout << "line" << std::endl ;
 	
 	
 	
