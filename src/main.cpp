@@ -51,7 +51,6 @@ int main(int argc, char *  argv[]) {
 	
 	for (int i = 0 ; i < numSampB; i++) {
 		
-		//std::getline(bFile, &samplesB[i]);
 		std::getline(bFile, line);
 		iss.str(line) ;
 		iss.clear();
