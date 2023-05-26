@@ -11,13 +11,13 @@ int main(int argc, char *  argv[]) {
 	double * samplesA;
 	double * samplesB;
 	
-	int            numSampA, numSampB;
-	double         A, B, C;
+	int numSampA, numSampB;
+	double A, B, C;
 
 	std::istringstream iss;
-
 	std::string line ;
 	
+	//read the A- text file 1st line - the no. of samples
 	aFile.open("input-A.txt");
 	std::getline(aFile, line);
 	iss.str(line) ;
@@ -27,6 +27,7 @@ int main(int argc, char *  argv[]) {
 	
 	samplesA = (double *) calloc(numSampA, sizeof(double));
 	
+	//read the A sample values
 	for (int i = 0 ; i < numSampA; i++) {
 		
 		std::getline(aFile, line);
@@ -38,8 +39,8 @@ int main(int argc, char *  argv[]) {
 	
 	aFile.close();
 	
+	//read the B- text file 1st line - the no. of samples
 	bFile.open("input-B.txt");
-	
 	std::getline(bFile, line);
 	iss.clear();
 	iss.str(line) ;
@@ -49,6 +50,7 @@ int main(int argc, char *  argv[]) {
 	
 	samplesB = (double *) calloc(numSampB, sizeof(double));
 	
+	//read the B sample values
 	for (int i = 0 ; i < numSampB; i++) {
 		
 		std::getline(bFile, line);
