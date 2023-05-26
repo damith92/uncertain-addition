@@ -2,7 +2,7 @@
 #include <fstream>
 #include <uncertain.h>
 #include <string.h>
-#include <sstream>
+//#include <sstream>
 
 int main(int argc, char *  argv[]) {
 	
@@ -14,15 +14,15 @@ int main(int argc, char *  argv[]) {
 	int            numSampA, numSampB;
 	double         A, B, C;
 
-	std::istringstream iss;
+	//std::istringstream iss;
 
 	std::string line ;
 	
 	aFile.open("file.txt");
 	
 	std::getline(aFile, line);
-	iss.str(line) ;
-	iss >> numSampA ;
+	//iss.str(line) ;
+	numSampA = std::stoi(line);
 	
 	samplesA = (double *) calloc(numSampA, sizeof(double));
 	
@@ -30,8 +30,8 @@ int main(int argc, char *  argv[]) {
 		
 		//std::getline(aFile, &samplesA[i]);
 		std::getline(aFile, line);
-		iss.str(line) ;
-		iss >> samplesA[i];
+		//iss.str(line) ;
+		&samplesA[i] = std::stod(line);
 		
 	}
 	
@@ -42,8 +42,8 @@ int main(int argc, char *  argv[]) {
 	
 	//std::getline(bFile, numSampB);
 	std::getline(bFile, line);
-	iss.str(line) ;
-	iss >> numSampB ;
+	//iss.str(line) ;
+	numSampB = std::stoi(line); ;
 	
 	samplesB = (double *) calloc(numSampB, sizeof(double));
 	
@@ -51,8 +51,8 @@ int main(int argc, char *  argv[]) {
 		
 		//std::getline(bFile, &samplesB[i]);
 		std::getline(bFile, line);
-		iss.str(line) ;
-		iss >> samplesB[i];
+		//iss.str(line) ;
+		&samplesB[i] = std::stod(line);
 		
 	}
 	
