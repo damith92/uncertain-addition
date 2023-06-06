@@ -3,6 +3,7 @@
 #include <uncertain.h>
 #include <string>
 #include <sstream>
+#include <iomanip>
 
 int main(int argc, char *  argv[]) {
 	
@@ -16,6 +17,9 @@ int main(int argc, char *  argv[]) {
 
 	std::istringstream iss;
 	std::string line ;
+	
+	std::cout << std::fixed;
+    	std::cout << std::setprecision(6);
 	
 	//read the A- text file 1st line - the no. of samples
 	aFile.open("input-A.txt");
