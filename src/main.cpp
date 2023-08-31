@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <uncertain.h>
+#include <uxhw.h>
 #include <string>
 #include <sstream>
 #include <iomanip>
@@ -58,17 +58,17 @@ int main(int argc, char *  argv[]) {
 	for (int i = 0 ; i < numSampB; i++) {
 		
 		std::getline(bFile, line);
-		iss.str(line) ;
 		iss.clear();
+		iss.str(line) ;
 		iss >> samplesB[i];
 		
 	}
 	
 	bFile.close();
 	
-	A = libUncertainDoubleDistFromSamples(samplesA, numSampA);
+	A = UxHwDoubleDistFromSamples(samplesA, numSampA);
 	
-	B = libUncertainDoubleDistFromSamples(samplesB, numSampB);
+	B = UxHwDoubleDistFromSamples(samplesB, numSampB);
 	
 	C = A + B ;
 	
